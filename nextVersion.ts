@@ -9,26 +9,24 @@
  * run yarn test
 */
 
-const nextVersion = (version) => {
-  if(version.length === 0) return "Invalid current version number!"; // Don't process further if current value is blank
+const nextVersion = (currentVersion) => {
+  if(currentVersion.length === 0) return "Invalid current version number!"; // Don't process further if current value is blank
 
-  const newVersion = version.split('.').map(Number); // convert the string to an array of numbers separated by ","
-  const reverseOrder = newVersion.length - 1;
+  const nextVersion = currentVersion.split('.').map(Number); // convert the string to an array of numbers separated by ","
   /**
    * Loop thru the array in reverse order
    * if the incremental value of the current element is 10 and it is not the first element of the array, then give it a value of zero (0), and continue processing the previous element of the array
    * Increment the previous element of the array and break the loop to return the new version number
    */
-  for (let i = reverseOrder; i >= 0; i--) {
-
-    if(newVersion[i] +1 === 10 && i != 0) {
-      newVersion[i] = 0;
+  for (let i = nextVersion.length - 1; i >= 0; i--) {
+    if(nextVersion[i] +1 === 10 && i != 0) {
+      nextVersion[i] = 0;
     } else {
-      newVersion[i]++;
+      nextVersion[i]++;
       break;
     }
   }
-  return newVersion.join('.').toString();
+  return nextVersion.join('.').toString();
 }
 
 module.exports = { nextVersion };
