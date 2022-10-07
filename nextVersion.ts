@@ -1,6 +1,8 @@
-/** Given a current version number in string format, the function will return the next version number in string format.
+/** Given a current version number in string format, 
+ * the function will return the next version number in string format.
  * 
- * You can test the code locally stand-alone as under:
+ * You can test the code locally stand-alone by adding console.logs as under and 
+ * running node nextVersion.ts from the terminal command prompt:
  * console.log('nextVersion("1.2.3") returns ("1.2.4"): ', nextVersion('1.2.3')); // 1.2.4
  * 
  * Alternatively - for automated tests, 
