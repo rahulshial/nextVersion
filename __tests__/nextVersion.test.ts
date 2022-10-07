@@ -29,8 +29,8 @@ describe('Next Version Tests', () => {
     expect(nextVersion(".9")).toEqual("1.0")
    });
 
-   test('should return undefined for ""', () => { 
-    expect(nextVersion("")).toBeUndefined
+   test('should return Invalid current version number! for ""', () => { 
+    expect(nextVersion("")).toEqual("Invalid current version number!")
    });
 
 })
