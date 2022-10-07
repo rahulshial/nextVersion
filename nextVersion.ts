@@ -14,7 +14,7 @@
 const nextVersion = (currentVersion) => {
   if(currentVersion.length === 0) return "Invalid current version number!"; // Don't process further if current value is blank
 
-  const nextVersion = currentVersion.split('.').map(Number); // convert the string to an array of numbers separated by ","
+  const nextVersion = currentVersion.split('.').map(Number); // convert the string to an array of numbers
   /**
    * Loop thru the array in reverse order
    * if the incremental value of the current element is 10 and it is not the first element of the array, then give it a value of zero (0), and continue processing the previous element of the array
