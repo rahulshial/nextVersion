@@ -10,7 +10,7 @@
 */
 
 const nextVersion = (version) => {
-  if(version.length === 0) return "Invalid current version number!"; // Don't process further if current value is invalid
+  if(version.length === 0) return "Invalid current version number!"; // Don't process further if current value is blank
 
   const newVersion = version.split('.').map(Number); // convert the string to an array of numbers separated by ","
   const reverseOrder = newVersion.length - 1;
@@ -20,6 +20,7 @@ const nextVersion = (version) => {
    * Increment the previous element of the array and break the loop to return the new version number
    */
   for (let i = reverseOrder; i >= 0; i--) {
+
     if(newVersion[i] +1 === 10 && i != 0) {
       newVersion[i] = 0;
     } else {
@@ -29,9 +30,5 @@ const nextVersion = (version) => {
   }
   return newVersion.join('.').toString();
 }
-
-/** Tests 
-
-*/
 
 module.exports = { nextVersion };
