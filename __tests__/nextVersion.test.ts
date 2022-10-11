@@ -1,4 +1,5 @@
-import { nextVersion } from '../nextVersion';
+import nextVersion from '../nextVersion';
+import { describe, expect, it, test } from '@jest/globals';
 
 describe('Next Version Tests', () => {
   test('should return 1.2.4 for 1.2.3', () => { 

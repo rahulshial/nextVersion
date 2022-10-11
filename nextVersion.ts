@@ -31,4 +31,14 @@ const nextVersion = (currentVersion) => {
   return nextVersion.join('.').toString();
 }
 
-module.exports = { nextVersion };
+/**
+ * Comment the line below to use the module in your components or running automated tests
+ * and uncomment the export default line
+ */
+//  console.log('nextVersion("1.2.3") returns ("1.2.4"): ', nextVersion('1.2.3')); // 1.2.4
+
+/** 
+ * Comment the export default line to test the function locally using
+ * console.log('nextVersion("1.2.3") returns ("1.2.4"): ', nextVersion('1.2.3')); // 1.2.4
+ */
+export default nextVersion;
